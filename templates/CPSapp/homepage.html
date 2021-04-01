@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/home">
+                <img src="{% static 'CPSapp/TourismIcon.jpg' %}" class="rounded-circle" alt="Logo" style="width:40px;">
+              </a>  
+            <a class="navbar-brand" href="/home">Avoid Crowd</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-brand" href="/home">Home</a></li>
+          &nbsp;
+          &nbsp;
+          <li class="nav-item dropdown"><a class="navbar-brand dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Destination</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Mumbai</a>
+                <a class="dropdown-item" href="#">Pune</a>
+                <a class="dropdown-item" href="#">Nashik</a>
+                <a class="dropdown-item" href="#">Nagpur</a>
+            </div>
+          </li>
+            
+          &nbsp;
+          &nbsp;
+          <li><a class="navbar-brand" href="#">News</a></li>
+          &nbsp;
+          &nbsp;
+          <li><a class="navbar-brand" href="#">About</a></li>
+        </ul>
+      </div>
+</nav>
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Covid-19:</strong><a href="https://www.mygov.in/covid-19" class="alert-link"> Guidelines</a> for travelling in India
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-6" style="margin-top: 180px;">
+        <h1 style="text-align: center;">HOW BUSY IS YOUR FAVOURITE TOURIST DESTINATION?</h1>
+        <div style="text-align: center;">
+        <p><small>Predict and Avoid Crowd smartly with us.... </small></p>
+        <small>Enter date:</small><br>
+        <input type="text" name="city"><br>
+        <small>Enter destination:</small><br>
+        <input type="text" name="city">
+        <br>
+        <br>
+        <input type="submit" class="btn btn-info" value="Search">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img class="load"  src="https://source.unsplash.com/960x640/?tourism,mountains" alt="Image" 
+           style = "height: auto; margin-top: 110px; margin-left: 50px; width: 100%; max-width:585px;">
+      </div>
+    </div>  
+</div>  
+</div>  
+<script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
+{% endblock %}
