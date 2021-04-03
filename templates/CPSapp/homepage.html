@@ -1,38 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div style="display:none;" id="myDiv" class="animate-bottom">
+<div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom"></div>
 
-<nav class="navbar navbar-expand-sm bg-info navbar-dark">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/home">
-                <img src="{% static 'CPSapp/TourismIcon.jpg' %}" class="rounded-circle" alt="Logo" style="width:40px;">
-              </a>  
-            <a class="navbar-brand" href="/home">Avoid Crowd</a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="navbar-brand" href="/home">Home</a></li>
-          &nbsp;
-          &nbsp;
-          <li class="nav-item dropdown"><a class="navbar-brand dropdown-toggle" id="navbardrop" data-toggle="dropdown" href="#">Destination</a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Mumbai</a>
-                <a class="dropdown-item" href="#">Pune</a>
-                <a class="dropdown-item" href="#">Nashik</a>
-                <a class="dropdown-item" href="#">Nagpur</a>
-            </div>
-          </li>
-            
-          &nbsp;
-          &nbsp;
-          <li><a class="navbar-brand" href="#">News</a></li>
-          &nbsp;
-          &nbsp;
-          <li><a class="navbar-brand" href="/aboutme">About</a></li>
-        </ul>
-      </div>
-</nav>
+
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>Covid-19:</strong><a href="https://www.mygov.in/covid-19" class="alert-link"> Guidelines</a> for travelling in India
@@ -66,6 +38,8 @@
       </div>
     </div>  
 </div>  
+
+
 </div>  
 <script>
   var myVar;
