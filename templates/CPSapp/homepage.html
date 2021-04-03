@@ -23,13 +23,16 @@
         <h1 style="text-align: center;">HOW BUSY IS YOUR FAVOURITE TOURIST DESTINATION?</h1>
         <div style="text-align: center;">
         <p><small>Predict and Avoid Crowd smartly with us.... </small></p>
-        <small>Enter date:</small><br>
-        <input type="text" name="city"><br>
+        <form action="/page2/" method="post">
+          {% csrf_token %}
+        <small>Enter number of the week:</small><br>
+        <input type="text" name="week"><br>
         <small>Enter destination:</small><br>
         <input type="text" name="city">
         <br>
         <br>
         <input type="submit" class="btn btn-info" value="Search">
+      </form>
         </div>
       </div>
       <div class="col-md-6">
