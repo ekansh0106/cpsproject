@@ -2,10 +2,14 @@
 {% load static %}
 {% block content %}
 
-
-
 <h6>The week You are Going to Visit : {{ myweek }}</h6>
 <h6>Your Destination Is : {{ mycity }}</h6>
-
-
+<p>Predicted result based on yearly trend is : {{p}} %</p>
+<p>Actual level of interest for the week is : {{s}}</p>
+<p>Average rating of {{ mycity }} is : {{avrg}}</p><br>
+ <hr>
+<p>Positive tweets percentage: {{ptp}}</p>
+<p>Negative tweets percentage: {{ntp}}</p>
+<p>Positive tweets: {{pt}}</p>
+<p>Negative tweets: {{nt}}</p>
 {% endblock %}
