@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-<h6>The week You are Going to Visit : {{ myweek }}</h6>
-<h6>Your Destination Is : {{ mycity }}</h6>
-<p>Predicted result based on yearly trend is : {{p}} %</p>
-<p>Actual level of interest for the week is : {{s}}</p>
-<p>Average rating of {{ mycity }} is : {{avrg}}</p><br>
- <hr>
-<p>Positive tweets percentage: {{ptp}}</p>
-<p>Negative tweets percentage: {{ntp}}</p>
-<p>Positive tweets: {{pt}}</p>
-<p>Negative tweets: {{nt}}</p>
+<button style="width:300px;margin:0 50%;position:relative;left:-150px;" id="demo" onclick="getElementById('demo').innerHTML = Date()">What is the time?</button>
+<form action="/page3/" >
+    {% csrf_token %}
+    <h6>The week You are Going to Visit : {{ myweek }}</h6>
+    <h6>Your Destination Is : {{ mycity }}</h6>
+    <p>Predicted result based on yearly trend is : {{p}} %</p>
+    <p>Actual level of interest for the week is : {{s}}</p>
+    <p>Average rating of {{ mycity }} is : {{avrg}}</p><br>
+    <hr>
+    <input type="submit" class="btn btn-info" value="Tweets" style="width:300px;margin:0 50%;position:relative;left:-150px;">
+</form>
 {% endblock %}

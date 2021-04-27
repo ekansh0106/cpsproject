@@ -24,9 +24,9 @@ def search(mycity):
     newDatasetHotel = datasetHotel[np.isfinite(datasetHotel['site_review_rating'])]
     #x=input("Enter the City Name")
     
-    print (newDatasetHotel[newDatasetHotel["city"] == mycity])
+    #print (newDatasetHotel[newDatasetHotel["city"] == mycity])
     a = newDatasetHotel[newDatasetHotel["city"] == mycity]
-    print("Average rating in %s is" %mycity)
+    #print("Average rating in %s is" %mycity)
     result = np.mean(a.iloc[:, 2].values)
     return result
 
@@ -164,3 +164,31 @@ def disp (request):
     pt = twt[2]
     nt = twt[3]
     return render(request,'CPSapp/page2.html',{'myweek': myweek ,'mycity': mycity,'avrg': avrg,'p':p,'s':s,'ptp': ptp,'ntp':ntp,'pt':pt,'nt':nt,})
+
+
+def mum(request):
+    return render(request, 'CPSapp/mumbai.html')
+
+def delhi(request):
+    return render(request, 'CPSapp/delhi.html')
+
+def goa(request):
+    return render(request, 'CPSapp/goa.html')
+
+def man(request):
+    return render(request, 'CPSapp/manali.html')
+
+def raj(request):
+    return render(request, 'CPSapp/rajasthan.html')
+
+def news(request):
+    from gnewsclient import gnewsclient 
+    cli = gnewsclient.NewsClient(language='english', 
+                                location='India', 
+                                topic='Tourism in India', 
+                                max_results=10) 
+
+    dict= {'news_list':cli.get_news(),
+            'cli': cli}
+    return render(request, 'CPSapp/news.html', dict)
+
