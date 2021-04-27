@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <h1 style="text-align: center;">Delhi</h1>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.holidify.com/images/cmsuploads/compressed/Qutub_Minar_in_the_monsoons_20170908115259.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(1)" alt="Qutub Minar">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.planetware.com/photos-large/IND/india-delhi-red-fort.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(2)" alt="Red Fort">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://media-cdn.tripadvisor.com/media/photo-s/16/e0/7b/c2/picture-clicked-at-the.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(3)" alt="India Gate">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://blog.thomascook.in/wp-content/uploads/2018/05/img-7-3-e1526876027464.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(4)" alt="Lotus Temple">
+    </div>
+  </div>
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img id="big" src="https://www.holidify.com/images/cmsuploads/compressed/Qutub_Minar_in_the_monsoons_20170908115259.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img id="big" src="https://www.planetware.com/photos-large/IND/india-delhi-red-fort.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img id="big" src="https://media-cdn.tripadvisor.com/media/photo-s/16/e0/7b/c2/picture-clicked-at-the.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img id="big" src="https://blog.thomascook.in/wp-content/uploads/2018/05/img-7-3-e1526876027464.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div id="dispinfo" class="col-md-10 scroll" style="margin-top: 5px;">
+    
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-3 info" style="display: none;">
+      <h4> 
+        <ul style="list-style-type:square; text-align: left;"> 
+          <li>Qutub Minar means ‘pole’ or ‘axis’ in Arabic</li>
+          <li>The Qutub Minar is the highest single tower in India</li>  
+          <li>The tower marked the site of the first Muslim kingdom in North India</li>  
+          <li>It was built as a mighty, awesome tower of victory to commemorate the defeat of the last Hindu kingdom in Delhi</li>  
+          <li>Qutub Minar was meant to be the prototype of all minars (towers) in India</li>  
+          <li>It was influenced by the brick victory pillars in Ghazni in Afghanistan</li>  
+          <li>The iron pillar in the Qutub Minar complex has not rusted after some 2000 years</li>  
+          <li>Parts of the Qutub Minar complex have been built out of Hindu temples which can be seen clearly in the Quwwat-ul-Islam Masjid</li>  
+          <li>The Qutub Minar has been damaged by lightening twice in 1326 and 1368</li>  
+          <li>Qutub Minar has a Decorative Light Show every evening from 6:30 to 8pm as well as the Qutub Minar Festival in October/November</li>  
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          
+        </ul>
+      </h4>
+    </div>
+</div>
+<a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g304551-Activities-New_Delhi_National_Capital_Territory_of_Delhi.html"><li>And Others</li></a>
+
+
+
+
+
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  var info = document.getElementsByClassName("info");
+  var dispinfo = document.getElementById("dispinfo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  dispinfo.innerHTML = info[slideIndex-1].innerHTML
+}
+</script>
+
+{% endblock %}

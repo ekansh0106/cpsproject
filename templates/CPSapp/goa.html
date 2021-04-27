@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h1 style="text-align: center;">Goa</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <img class="crop-img" id="image1"
+              src="https://www.picnicwale.com/attractions/assets/sightseeing/price-for-baga-beach-in-goa.jpg" 
+              alt="graffittied building"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" id="image2"
+              src="https://cdn.thegoavilla.com/static/img/articles/fort-aguada.jpg" 
+              alt="display of cheese"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" id="image3"
+              src="https://cdn.thegoavilla.com/static/img/articles/national-naval-aviation-museum.jpg" 
+              alt="synethesizer workshop"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" id="image4"
+               src="https://www.outlookindia.com/outlooktraveller/public/uploads/articles/travelnews/shutterstock_691224739.jpg" 
+               alt="City night"/> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div style="margin:auto;">
+          <button id="backward">&#10094;</button>
+          <img id="bigImage" src="https://www.picnicwale.com/attractions/assets/sightseeing/price-for-baga-beach-in-goa.jpg" alt="Image" 
+             style = "height: 100%;max-height: 280px; margin-top: 25px;  width: 100%; max-width:585px;">
+          <button id="forward">&#10095;</button>
+        </div>
+      </div>
+    <br>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-5">
+        <h5 style="text-align: center; margin-left: 100px;" id="message">Baga Beach</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 scroll" style="margin-top: 30px;">
+        <h4><p>Baga Beach is a popular beach and tourist destination in North Goa. Baga is located at the north end of the contiguous beach stretch that starts from Sinquerim, Candolim, leads to Calangute, and then to Baga.</p> 
+            <p>Dolphins can be located at around 1–2 km from the shoreline Parasailing in Baga Beach.</p>
+            <p>The beach contains rows of shacks and fishing boats, and at high tide the beach is narrow.</p> 
+            <p>The beach is named after the Baga Creek, which empties into the Arabian Sea at the north end of the beach.</p>
+            <p>Baga Beach is also famous for water sports, such as parasailing and banana rides, and dolphin cruises. In Baga Beach, new parking has been constructed for around 800 cars or more, and there is baga creek bridge which connects northern part like Arpora, Anjuna etc..</p></h4>
+        <div>
+          <h5>
+          <ul>
+            <li id="f1" style="display:none;">Baga Beach</li>
+            <li id="f2" style="display:none;">Fort Aguada</li>
+            <li id="f3" style="display:none;">Naval Aviation Museum</li>
+            <li id="f4" style="display:none;">Dudhsagar falls</li>
+            <a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g297604-Activities-Goa.html">More Info</a>
+          </ul>
+        </h5>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    
+</div>
+
+<script>
+  var paused = false;
+    $(".crop-img").click(function(){
+        $("#bigImage").attr('src', 
+            $(this).attr('src'));
+    });
+    var counter = 0;
+    $("#image"+counter).click();
+
+    $("#backward").click(function(){
+        counter = counter - 1;
+        if(counter < 1){
+          counter = 4;
+        };
+        $("#image"+counter).click();
+        document.getElementById("message")
+        .innerHTML = document.getElementById("f"+ counter).innerHTML;
+    });
+    $("#forward").click(function(){
+        counter = counter + 1;
+        if(counter > 4){
+          counter = 1;
+        };
+        $("#image"+counter).click();
+        document.getElementById("message")
+        .innerHTML = document.getElementById("f"+ counter).innerHTML;
+    });
+    img = document.getElementById("bigImage");
+    $("#bigImage").click(function(){
+        paused = !paused;  
+        img.style.transform = "scale(1.2)";
+        img.style.transition = "transform 0.25s ease";      
+    });
+    setInterval(function(){
+      if (!paused){
+        $("#forward").click();
+        img.style.transform = "scale(1)";
+        img.style.transition = "transform 0.25s ease";
+      };
+    },2000);
+</script>
+
+
+{% endblock %}

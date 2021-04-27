@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% for i in news_list %}
+        <a href="{{i.link}}"><b>{{i.title}}</b></a><br><hr>
+    {% endfor %}
+{% endblock %}

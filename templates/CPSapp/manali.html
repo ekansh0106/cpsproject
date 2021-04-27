@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h1 style="text-align: center;">Manali</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Hadimba-Temple.jpg" 
+              alt="graffittied building"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Solang-Valley.jpg" 
+              alt="display of cheese"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/The-Manali-Gompa.jpg" 
+              alt="synethesizer workshop"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+               src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Bhrigu-Lake.jpg" 
+               alt="City night"/> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-md-6" style="margin-top: 100px;">
+          <h1 style="text-align: center;">Top tourist attractions</h1>
+          <div style="align-content: center;">
+            <h5>
+            <ul>
+              <li>Hadimba Temple</li>
+              <li>Solang Valley</li>
+              <li>The Manali Gompa</li>
+              <li>Bhrigu Lake</li>
+              <a href="https://www.tripadvisor.in/Attractions-g297618-Activities-Manali_Manali_Tehsil_Kullu_District_Himachal_Pradesh.html"><li>And Others</li></a>
+            </ul>
+          </h5>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img id="bigImage" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Hadimba-Temple.jpg" alt="Image" 
+             style = "height: 100%;max-height: 300px; margin-top: 25px;  width: 100%; max-width:585px;">
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".crop-img").click(function(){
+        $("#bigImage").attr('src', 
+            $(this).attr('src'));
+    });
+</script>
+
+
+{% endblock %}

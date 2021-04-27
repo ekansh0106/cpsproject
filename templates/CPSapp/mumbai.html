@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h1 style="text-align: center;">Mumbai</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://images.ctfassets.net/niwziy2l9cvz/17SyHH05BqCeMGoCEuCioc/6f0969193494d95d909bf3eb123f7c06/mubai-Gateway_of_India-1112x630__1_.jpg" 
+              alt="graffittied building"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2017/07/03/589680-sea-link-bandra-worli-070317.jpg" 
+              alt="display of cheese"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://www.tripsavvy.com/thmb/G8OhG3hb388XPH74OWxAyeUylJ8=/1024x683/filters:no_upscale():max_bytes(150000):strip_icc()/Mumbai2019-1-37-4d7b2be25a5b4f6ab9aa5369fe0a74a1.JPG" 
+              alt="synethesizer workshop"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+               src="https://mcmscache.epapr.in/post_images/website_266/post_11096581/thumb.jpg" 
+               alt="City night"/> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-md-6" style="margin-top: 100px;">
+          <h1 style="text-align: center;">Top tourist attractions</h1>
+          <div style="align-content: center;">
+            <h5>
+            <ul>
+              <li>Gateway Of India and Taj Hotel</li>
+              <li>Bandra-Worli Sealink</li>
+              <li>Kanheri Caves</li>
+              <li>Nehru Planetarium</li>
+              <a href="https://www.tripadvisor.in/Attractions-g304554-Activities-Mumbai_Maharashtra.html"><li>And Others</li></a>
+            </ul>
+          </h5>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img id="bigImage" src="https://images.ctfassets.net/niwziy2l9cvz/17SyHH05BqCeMGoCEuCioc/6f0969193494d95d909bf3eb123f7c06/mubai-Gateway_of_India-1112x630__1_.jpg" alt="Image" 
+             style = "height: 100%;max-height: 300px; margin-top: 25px;  width: 100%; max-width:585px;">
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".crop-img").click(function(){
+        $("#bigImage").attr('src', 
+            $(this).attr('src'));
+    });
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h1 style="text-align: center;">Rajasthan</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Inside-Amer-Fort-Jaipur.jpg" 
+              alt="graffittied building"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Ranakpur-Jain-Temples-Udaipur.jpg" 
+              alt="display of cheese"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+              src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Kumbhalgarh-Fort-Udaipur.jpg" 
+              alt="synethesizer workshop"/> 
+        </div>
+        <div class="col-md-3">
+            <img class="crop-img" 
+               src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Sheesh-Mahal-Jaipur.jpg" 
+               alt="City night"/> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-md-6" style="margin-top: 100px;">
+          <h1 style="text-align: center;">Top tourist attractions</h1>
+          <div style="align-content: center;">
+            <h5>
+            <ul>
+              <li>Amber Fort and Palace</li>
+              <li>Jain Temple</li>
+              <li>Kumbhalgarh Fort</li>
+              <li>Sheesh Mahal (Hall of Mirrors)</li>
+              <a href="https://www.tripadvisor.co.nz/Attractions-g297665-Activities-Rajasthan.html"><li>And Others</li></a>
+            </ul>
+          </h5>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img id="bigImage" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Inside-Amer-Fort-Jaipur.jpg" alt="Image" 
+             style = "height: 100%;max-height: 300px; margin-top: 25px;  width: 100%; max-width:585px;">
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".crop-img").click(function(){
+        $("#bigImage").attr('src', 
+            $(this).attr('src'));
+    });
+</script>
+
+
+{% endblock %}
