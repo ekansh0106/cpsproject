@@ -2,59 +2,143 @@
 {% load static %}
 {% block content %}
 
+
 <div class="container">
-    <h1 style="text-align: center;">Mumbai</h1>
-
-    <div class="row">
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://images.ctfassets.net/niwziy2l9cvz/17SyHH05BqCeMGoCEuCioc/6f0969193494d95d909bf3eb123f7c06/mubai-Gateway_of_India-1112x630__1_.jpg" 
-              alt="graffittied building"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2017/07/03/589680-sea-link-bandra-worli-070317.jpg" 
-              alt="display of cheese"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://www.tripsavvy.com/thmb/G8OhG3hb388XPH74OWxAyeUylJ8=/1024x683/filters:no_upscale():max_bytes(150000):strip_icc()/Mumbai2019-1-37-4d7b2be25a5b4f6ab9aa5369fe0a74a1.JPG" 
-              alt="synethesizer workshop"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-               src="https://mcmscache.epapr.in/post_images/website_266/post_11096581/thumb.jpg" 
-               alt="City night"/> 
-        </div>
+  <h1 style="text-align: center;">Mumbai</h1>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://images.ctfassets.net/niwziy2l9cvz/17SyHH05BqCeMGoCEuCioc/6f0969193494d95d909bf3eb123f7c06/mubai-Gateway_of_India-1112x630__1_.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(1)" alt="Gate way of India and Taj Hotel">
     </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2017/07/03/589680-sea-link-bandra-worli-070317.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(2)" alt="Bandra-worli Sealink">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.tripsavvy.com/thmb/G8OhG3hb388XPH74OWxAyeUylJ8=/1024x683/filters:no_upscale():max_bytes(150000):strip_icc()/Mumbai2019-1-37-4d7b2be25a5b4f6ab9aa5369fe0a74a1.JPG" style="width:80%; max-height:120px;" onclick="currentSlide(3)" alt="Kanheri Caves">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://mcmscache.epapr.in/post_images/website_266/post_11096581/thumb.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(4)" alt="Nehru planetarium">
+    </div>
+  </div>
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img id="big" src="https://images.ctfassets.net/niwziy2l9cvz/17SyHH05BqCeMGoCEuCioc/6f0969193494d95d909bf3eb123f7c06/mubai-Gateway_of_India-1112x630__1_.jpg" style="width:100%">
+  </div>
 
-    <div class="row">
-        <div class="col-sm-3 col-md-6" style="margin-top: 100px;">
-          <h1 style="text-align: center;">Top tourist attractions</h1>
-          <div style="align-content: center;">
-            <h5>
-            <ul>
-              <li>Gateway Of India and Taj Hotel</li>
-              <li>Bandra-Worli Sealink</li>
-              <li>Kanheri Caves</li>
-              <li>Nehru Planetarium</li>
-              <a href="https://www.tripadvisor.in/Attractions-g304554-Activities-Mumbai_Maharashtra.html"><li>And Others</li></a>
-            </ul>
-          </h5>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <img id="bigImage" src="https://images.ctfassets.net/niwziy2l9cvz/17SyHH05BqCeMGoCEuCioc/6f0969193494d95d909bf3eb123f7c06/mubai-Gateway_of_India-1112x630__1_.jpg" alt="Image" 
-             style = "height: 100%;max-height: 300px; margin-top: 25px;  width: 100%; max-width:585px;">
-        </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img id="big" src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2017/07/03/589680-sea-link-bandra-worli-070317.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img id="big" src="https://www.tripsavvy.com/thmb/G8OhG3hb388XPH74OWxAyeUylJ8=/1024x683/filters:no_upscale():max_bytes(150000):strip_icc()/Mumbai2019-1-37-4d7b2be25a5b4f6ab9aa5369fe0a74a1.JPG" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img id="big" src="https://mcmscache.epapr.in/post_images/website_266/post_11096581/thumb.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div id="dispinfo" class="col-md-10 scroll" style="margin-top: 5px;">
+    
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-3 info" style="display: none;">
+      <h4> 
+        <ul style="list-style-type:square; text-align: left;"> 
+          <li>The Gateway of India is an arch monument built during the 20th century</li>
+	        <li>The Gateway of India is located on the waterfront at Apollo Bunder area at the end of Chhatrapati Shivaji Marg in South Mumbai and overlooks the Arabian Sea. </li>          
+	        <li>The Taj Mahal Palace Hotel is a heritage, five-star, luxury hotel built in the Saracenic Revival style  situated next to the Gateway of India</li>
+	        <li>In 2017, the Taj Mahal Palace Hotel acquired an image trademark,the first building in the country to secure intellectual-property-right protection for its architectural design</li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>The Bandra–Worli Sea Link (officially known as Rajiv Gandhi Sea Link) is a bridge that links Bandra in the Western Suburbs of Mumbai with Worli in South Mumbai</li>
+          <li>It is a famous eight lane cable stayed bridge adorning the arc of Mumbai’s coastline</li>
+          <li>It is said to be one of the most breathtaking pieces of architecture that is constructed by the authorities in Mumbai.</li>
+          <li>The beautiful architectural innovation complements the landscape of blue waters by the Mahim Bay in the city of Mumbai. It has become a tourist attraction because of the wonderful views it offers. </li>  
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>The Kanheri Caves are a group of caves and rock-cut monuments cut into a massive basalt outcrop in the forests of the Sanjay Gandhi National Park, on the former island of Salsette in the western outskirts of Mumbai</li>
+          <li>They contain Buddhist sculptures and relief carvings, paintings and inscriptions, dating from the 1st century CE to the 10th century CE. Kanheri comes from the Sanskrit Krishnagiri, which means black mountain.</li>
+          <li> The site is on a hillside, and is accessible via rock-cut steps. The cave complex comprises one hundred and nine caves. The oldest are relatively plain and unadorned, in contrast to later caves on the site, and the highly embellished Elephanta Caves of Mumbai</li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>Nehru Planetarium is a huge dome-shaped building which was established in 1977 and inaugurated by the then Prime Minister, Indira Gandhi. Located in Worli in Mumbai</li>
+          <li> The building later became immensely popular among the astronomers, space aspirants and children in Mumbai.</li>
+          <li>Moreover, the planetarium is a center of logical study for students and amateur scientists of astronomy and space science </li>
+          <li>Planetarium also witnesses various discussions and lectures based on astronomical and cosmological events like science quiz contest, Astro painting, Astro poetry and science elocution for science-inspired students</li>
+        </ul>
+      </h4>
     </div>
 </div>
+<a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g304551-Activities-New_Delhi_National_Capital_Territory_of_Delhi.html"><li>And Others</li></a>
+
+
+
+
 
 <script>
-    $(".crop-img").click(function(){
-        $("#bigImage").attr('src', 
-            $(this).attr('src'));
-    });
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  var info = document.getElementsByClassName("info");
+  var dispinfo = document.getElementById("dispinfo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  dispinfo.innerHTML = info[slideIndex-1].innerHTML
+}
 </script>
 
 

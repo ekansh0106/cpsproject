@@ -3,112 +3,142 @@
 {% block content %}
 
 <div class="container">
-    <h1 style="text-align: center;">Goa</h1>
+  <h1 style="text-align: center;">Goa</h1>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.picnicwale.com/attractions/assets/sightseeing/price-for-baga-beach-in-goa.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(1)" alt="Baga Beach">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://cdn.thegoavilla.com/static/img/articles/fort-aguada.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(2)" alt="Fort Aguada">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://cdn.thegoavilla.com/static/img/articles/national-naval-aviation-museum.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(3)" alt="Naval Avaiation">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.outlookindia.com/outlooktraveller/public/uploads/articles/travelnews/shutterstock_691224739.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(4)" alt="Dudhsagar fall">
+    </div>
+  </div>
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img id="big" src="https://www.picnicwale.com/attractions/assets/sightseeing/price-for-baga-beach-in-goa.jpg" style="width:100%">
+  </div>
 
-    <div class="row">
-        <div class="col-md-3">
-            <img class="crop-img" id="image1"
-              src="https://www.picnicwale.com/attractions/assets/sightseeing/price-for-baga-beach-in-goa.jpg" 
-              alt="graffittied building"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" id="image2"
-              src="https://cdn.thegoavilla.com/static/img/articles/fort-aguada.jpg" 
-              alt="display of cheese"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" id="image3"
-              src="https://cdn.thegoavilla.com/static/img/articles/national-naval-aviation-museum.jpg" 
-              alt="synethesizer workshop"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" id="image4"
-               src="https://www.outlookindia.com/outlooktraveller/public/uploads/articles/travelnews/shutterstock_691224739.jpg" 
-               alt="City night"/> 
-        </div>
-    </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img id="big" src="https://cdn.thegoavilla.com/static/img/articles/fort-aguada.jpg" style="width:100%">
+  </div>
 
-    <div class="row">
-        <div style="margin:auto;">
-          <button id="backward">&#10094;</button>
-          <img id="bigImage" src="https://www.picnicwale.com/attractions/assets/sightseeing/price-for-baga-beach-in-goa.jpg" alt="Image" 
-             style = "height: 100%;max-height: 280px; margin-top: 25px;  width: 100%; max-width:585px;">
-          <button id="forward">&#10095;</button>
-        </div>
-      </div>
-    <br>
-    <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-5">
-        <h5 style="text-align: center; margin-left: 100px;" id="message">Baga Beach</h5>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10 scroll" style="margin-top: 30px;">
-        <h4><p>Baga Beach is a popular beach and tourist destination in North Goa. Baga is located at the north end of the contiguous beach stretch that starts from Sinquerim, Candolim, leads to Calangute, and then to Baga.</p> 
-            <p>Dolphins can be located at around 1–2 km from the shoreline Parasailing in Baga Beach.</p>
-            <p>The beach contains rows of shacks and fishing boats, and at high tide the beach is narrow.</p> 
-            <p>The beach is named after the Baga Creek, which empties into the Arabian Sea at the north end of the beach.</p>
-            <p>Baga Beach is also famous for water sports, such as parasailing and banana rides, and dolphin cruises. In Baga Beach, new parking has been constructed for around 800 cars or more, and there is baga creek bridge which connects northern part like Arpora, Anjuna etc..</p></h4>
-        <div>
-          <h5>
-          <ul>
-            <li id="f1" style="display:none;">Baga Beach</li>
-            <li id="f2" style="display:none;">Fort Aguada</li>
-            <li id="f3" style="display:none;">Naval Aviation Museum</li>
-            <li id="f4" style="display:none;">Dudhsagar falls</li>
-            <a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g297604-Activities-Goa.html">More Info</a>
-          </ul>
-        </h5>
-        </div>
-      </div>
-      <div class="col-md-1"></div>
-    </div>
-    
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img id="big" src="https://cdn.thegoavilla.com/static/img/articles/national-naval-aviation-museum.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img id="big" src="https://www.outlookindia.com/outlooktraveller/public/uploads/articles/travelnews/shutterstock_691224739.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  
 </div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div id="dispinfo" class="col-md-10 scroll" style="margin-top: 5px;">
+    
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-3 info" style="display: none;">
+      <h4> 
+        <ul style="list-style-type:square; text-align: left;"> 
+          <li>Baga Beach is a popular beach and tourist destination in North Goa. Baga is located at the north end of the contiguous beach stretch that starts from Sinquerim, Candolim, leads to Calangute, and then to Baga.</li>
+          <li>Dolphins can be located at around 1–2 km from the shoreline Parasailing in Baga Beach.</li>  
+          <li>The beach contains rows of shacks and fishing boats, and at high tide the beach is narrow.</li>  
+          <li>The beach is named after the Baga Creek, which empties into the Arabian Sea at the north end of the beach.</li>
+          <li>Baga Beach is also famous for water sports, such as parasailing and banana rides, and dolphin cruises. In Baga Beach, new parking has been constructed for around 800 cars or more, and there is baga creek bridge which connects northern part like Arpora, Anjuna etc.</li>  
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>The fort was originally constructed in 1612 to guard against the Dutch. It was a reference point for the vessels coming from Europe at that time</li>
+          <li>Fort Aguada was the most prized and crucial fort of Portuguese. The fort is so large that it envelops the entire peninsula at the southwestern tip of Bardez</li> 
+          <li>A freshwater spring within the fort provided water supply to the ships that used to stop by. This is how the fort got its name: Aguada, meaning watery in the Portuguese language.</li>
+          <li>It was once the grandstand of 79 cannons. It has the capacity of storing 2,376,000 gallons of water, one of the biggest freshwater storage of the time in whole of Asia.</li>  
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>The Naval Aviation Museum at Goa showcases the rich history of Indian Naval Aviation.</li> 
+          <li>It has a prized collection of vintage and serving aircraft, their engines, armaments and much more to delight an aviation enthusiast or just a curious tourist.</li>
+          <li>It would not be possible to describe in detail here, the wealth of information at the museum except to say that if you are a historian, an aviation enthusiast, or just plain curious to learn more about naval aviation, be prepared to spend at least a few hours here !</li> 
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>Dudhsagar Falls is amongst India's tallest waterfalls with a height of 310 m (1017 feet) and an average width of 30 metres (100 feet).</li>
+          <li>The falls is located in the Bhagwan Mahaveer Sanctuary and Mollem National Park among the Western Ghats. </li> 
+          <li>The waterfall forms the border between Karnataka and Goa states.</li>
+          <li>The area is surrounded by deciduous forests with rich biodiversity</li>
+        </ul>
+      </h4>
+    </div>
+</div>
+<a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g304551-Activities-New_Delhi_National_Capital_Territory_of_Delhi.html"><li>And Others</li></a>
+
+
+
+
 
 <script>
-  var paused = false;
-    $(".crop-img").click(function(){
-        $("#bigImage").attr('src', 
-            $(this).attr('src'));
-    });
-    var counter = 0;
-    $("#image"+counter).click();
+    var slideIndex = 1;
+showSlides(slideIndex);
 
-    $("#backward").click(function(){
-        counter = counter - 1;
-        if(counter < 1){
-          counter = 4;
-        };
-        $("#image"+counter).click();
-        document.getElementById("message")
-        .innerHTML = document.getElementById("f"+ counter).innerHTML;
-    });
-    $("#forward").click(function(){
-        counter = counter + 1;
-        if(counter > 4){
-          counter = 1;
-        };
-        $("#image"+counter).click();
-        document.getElementById("message")
-        .innerHTML = document.getElementById("f"+ counter).innerHTML;
-    });
-    img = document.getElementById("bigImage");
-    $("#bigImage").click(function(){
-        paused = !paused;  
-        img.style.transform = "scale(1.2)";
-        img.style.transition = "transform 0.25s ease";      
-    });
-    setInterval(function(){
-      if (!paused){
-        $("#forward").click();
-        img.style.transform = "scale(1)";
-        img.style.transition = "transform 0.25s ease";
-      };
-    },2000);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  var info = document.getElementsByClassName("info");
+  var dispinfo = document.getElementById("dispinfo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  dispinfo.innerHTML = info[slideIndex-1].innerHTML
+}
 </script>
-
 
 {% endblock %}

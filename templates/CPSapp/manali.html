@@ -3,58 +3,141 @@
 {% block content %}
 
 <div class="container">
-    <h1 style="text-align: center;">Manali</h1>
-
-    <div class="row">
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Hadimba-Temple.jpg" 
-              alt="graffittied building"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Solang-Valley.jpg" 
-              alt="display of cheese"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/The-Manali-Gompa.jpg" 
-              alt="synethesizer workshop"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-               src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Bhrigu-Lake.jpg" 
-               alt="City night"/> 
-        </div>
+  <h1 style="text-align: center;">Manali</h1>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Hadimba-Temple.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(1)" alt="Hadimba-Temple">
     </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Solang-Valley.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(2)" alt="Solang-Valley">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/The-Manali-Gompa.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(3)" alt="The-Manali-Gompa">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Bhrigu-Lake.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(4)" alt="Bhrigu-Lake">
+    </div>
+  </div>
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img id="big" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Hadimba-Temple.jpg" style="width:100%">
+  </div>
 
-    <div class="row">
-        <div class="col-sm-3 col-md-6" style="margin-top: 100px;">
-          <h1 style="text-align: center;">Top tourist attractions</h1>
-          <div style="align-content: center;">
-            <h5>
-            <ul>
-              <li>Hadimba Temple</li>
-              <li>Solang Valley</li>
-              <li>The Manali Gompa</li>
-              <li>Bhrigu Lake</li>
-              <a href="https://www.tripadvisor.in/Attractions-g297618-Activities-Manali_Manali_Tehsil_Kullu_District_Himachal_Pradesh.html"><li>And Others</li></a>
-            </ul>
-          </h5>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <img id="bigImage" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Hadimba-Temple.jpg" alt="Image" 
-             style = "height: 100%;max-height: 300px; margin-top: 25px;  width: 100%; max-width:585px;">
-        </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img id="big" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Solang-Valley.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img id="big" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/The-Manali-Gompa.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img id="big" src="https://www.fabhotels.com/blog/wp-content/uploads/2019/03/Bhrigu-Lake.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div id="dispinfo" class="col-md-10 scroll" style="margin-top: 5px;">
+    
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-3 info" style="display: none;">
+      <h4> 
+        <ul style="list-style-type:square; text-align: left;"> 
+          <li>Hidimba Devi Temple, locally known as Dhungari Temple,also known variously as the Hadimba Temple is a hill station </li>
+	  <li>It is an ancient cave temple dedicated to Hidimbi Devi, wife of Bhima, a figure in the Indian epic Mahābhārata</li>
+          <li>The temple is for Hidimba who is the wife of Bhim.</li>
+	  <li>People in Manali worship Hidimba Devi as a deity. During Navaratri all Hindus across the nation worship goddess Durga, but people in Manali worship Hidimba Devi. Queues of people can be seen outside the temple, but the crowd increases during Navaratri</li>  
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>The valley is famous among tourists for its stunning views of snow-capped mountains and magnificent glaciers that attract ski fanatics from all over the world.</li>
+	  <li>The beauty of Solang Valley is unparalleled and many people visit the valley every year just to enjoy its pristine, snow-white magnificence</li>
+	  <li>Especially in winter, when the entire place is covered by fluffy, milky white snow, the whole place appears as if it is straight out of a movie. groves of emerald green trees dotting the pure white landscape, clear blue skies, and magnificent mountains as far as the eye can see – Solang is truly at its most splendorous in winters.</li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>Built in 1960, this is amongst the important spiritual pilgrimage centers for Buddhists.</li>
+	  <li>People from all over the world come here to see the giant statue of Lord Buddha</li>
+	  <li>Importantly, this place functions as a gathering place for Buddhists from neighbouring regions such as Lahaul, Spiti, Ladakh and Nepal.</li>
+	  <li>The monastery is renowned for its unique roof built in the Pagoda style. Inside the monastery, there are splendid paintings that portray the life and teachings of Lord Buddha.</li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>Bhrigu Lake or Brighu Lake is a lake located at an elevation of around 4,300 metres in Kullu district</li>
+	  <li>The best time to visit Bhrigu Lake is between October and May, March and May are the best time for trekking. </li>
+	  <li>This lake is situated on hike area. Beatiful scenery and look like heaven.Good for photography</li>
+	  <li>Legend has it that the sage used to meditate near the lake and hence it has been rendered sacred; the locals believe that due to this the lake never freezes completely</li>
+        </ul>
+      </h4>
     </div>
 </div>
+<a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g304551-Activities-New_Delhi_National_Capital_Territory_of_Delhi.html"><li>And Others</li></a>
+
+
+
+
 
 <script>
-    $(".crop-img").click(function(){
-        $("#bigImage").attr('src', 
-            $(this).attr('src'));
-    });
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  var info = document.getElementsByClassName("info");
+  var dispinfo = document.getElementById("dispinfo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  dispinfo.innerHTML = info[slideIndex-1].innerHTML
+}
 </script>
 
 

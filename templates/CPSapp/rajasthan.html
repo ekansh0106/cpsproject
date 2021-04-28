@@ -3,59 +3,142 @@
 {% block content %}
 
 <div class="container">
-    <h1 style="text-align: center;">Rajasthan</h1>
-
-    <div class="row">
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Inside-Amer-Fort-Jaipur.jpg" 
-              alt="graffittied building"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Ranakpur-Jain-Temples-Udaipur.jpg" 
-              alt="display of cheese"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-              src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Kumbhalgarh-Fort-Udaipur.jpg" 
-              alt="synethesizer workshop"/> 
-        </div>
-        <div class="col-md-3">
-            <img class="crop-img" 
-               src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Sheesh-Mahal-Jaipur.jpg" 
-               alt="City night"/> 
-        </div>
+  <h1 style="text-align: center;">Rajasthan</h1>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Inside-Amer-Fort-Jaipur.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(1)" alt="Amer Fort">
     </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Ranakpur-Jain-Temples-Udaipur.jpg" style="width:80%; max-height:120px; " onclick="currentSlide(2)" alt="Ranakpur Jain Temples">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Kumbhalgarh-Fort-Udaipur.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(3)" alt="Kumbhalgarh Fort">
+    </div>
+    <div class="col-md-3">
+      <img class="demo cursor" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Sheesh-Mahal-Jaipur.jpg" style="width:80%; max-height:120px;" onclick="currentSlide(4)" alt="Sheesh Mahal">
+    </div>
+  </div>
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img id="big" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Inside-Amer-Fort-Jaipur.jpg" style="width:100%">
+  </div>
 
-    <div class="row">
-        <div class="col-sm-3 col-md-6" style="margin-top: 100px;">
-          <h1 style="text-align: center;">Top tourist attractions</h1>
-          <div style="align-content: center;">
-            <h5>
-            <ul>
-              <li>Amber Fort and Palace</li>
-              <li>Jain Temple</li>
-              <li>Kumbhalgarh Fort</li>
-              <li>Sheesh Mahal (Hall of Mirrors)</li>
-              <a href="https://www.tripadvisor.co.nz/Attractions-g297665-Activities-Rajasthan.html"><li>And Others</li></a>
-            </ul>
-          </h5>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <img id="bigImage" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Inside-Amer-Fort-Jaipur.jpg" alt="Image" 
-             style = "height: 100%;max-height: 300px; margin-top: 25px;  width: 100%; max-width:585px;">
-        </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img id="big" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Ranakpur-Jain-Temples-Udaipur.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img id="big" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Kumbhalgarh-Fort-Udaipur.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img id="big" src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2020/11/Sheesh-Mahal-Jaipur.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  
+</div>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div id="dispinfo" class="col-md-10 scroll" style="margin-top: 5px;">
+    
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-3 info" style="display: none;">
+      <h4> 
+        <ul style="list-style-type:square; text-align: left;"> 
+          <li>A Monument that Catches the Eyes and Captures the Heart</li>
+          <li>A fine specimen of Rajputana and Mughal architecture styles, Amer Fort is amongst the top forts in India and a major attraction in Jaipur.</li>
+          <li> The fort that was once ruled by Maharaj Jai Singh I was declared a UNESCO World Heritage Site in 2013 and has many edifices to witness.</li>
+          <li>The major attractions of Amer Fort are its winter and summer places along with entrance gates (Pol) amongst which the most decorated one is Ganesh Pol.</li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>The renowned Jain temple at Ranakpur is dedicated to Tirthankara Adinatha.[2] Local legend has it that Dharma Shah, a local Jain businessperson, started construction of the temple in the 15th century following a divine vision. </li>
+          <li>The temple is a grand white marble structure spread over 48,000 square feet (4,500 m2) with 1444 marble pillars, twenty-nine halls, eighty domes and 426 columns</li>
+          <li>People irrespective of their religion or caste, go to temples for various reasons – seeking inner peace, gazing at the beautiful architecture, becoming closer to God, or to simply explore the culture represented by it.</li>
+          <li>It is considered as one of the 5 most sacred places for Jains. </li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>The fort that has made its mark in history as the second largest wall after the Great Wall of China – it is none but the Kumbhalgarh fort in Rajasthan.</li>
+          <li>The mighty fort is 3600 ft tall and 38km long that surrounds the area of Udaipur.</li>
+          <li>The fort is further declared a UNESCO World Heritage Site that is under the group Hill Forts of Rajasthan. It is located strategically on the western Aravalli hills</li>
+          <li>Having witnessed a large number of wars, the hill serves as the boundary that is unbreakable.</li>
+        </ul>
+      </h4>
+    </div>
+    <div class="col-md-3 info" style="display: none;">
+      <h4>
+        <ul style="list-style-type:square; text-align: left;">
+          <li>Sheesh mahal and also called as the mirror palace is one of the refined magnificent piece of architecture built with beautiful precious stones and glass, coated with beautiful handmade paintings. </li>
+          <li> Sheesh mahal is the most popular and beautiful part of Amer Fort. It is located in Amer, Jaipur.</li>
+          <li>This palace is also known for the bollywood legendary movie “Mughal-e-Azam” iconic song “Jab pyar kiya to darna kya.It was shot in Sheesh Mahal on legendary actress Madhubala which played the role of “Anarkali” in the movie.</li>
+          <li> If someone burns two candles, then the reflection converts that small light into thousand of stars and it looks awesome and by this you can get the idea of what was the level of architecture in that time in India.</li>
+        </ul>
+      </h4>
     </div>
 </div>
+<a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g304551-Activities-New_Delhi_National_Capital_Territory_of_Delhi.html"><li>And Others</li></a>
+
+
+
+
 
 <script>
-    $(".crop-img").click(function(){
-        $("#bigImage").attr('src', 
-            $(this).attr('src'));
-    });
-</script>
+    var slideIndex = 1;
+showSlides(slideIndex);
 
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  var info = document.getElementsByClassName("info");
+  var dispinfo = document.getElementById("dispinfo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  dispinfo.innerHTML = info[slideIndex-1].innerHTML
+}
+</script>
 
 {% endblock %}

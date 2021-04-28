@@ -77,25 +77,76 @@
     <div class="col-md-3 info" style="display: none;">
       <h4>
         <ul style="list-style-type:square; text-align: left;">
-
+          <li>The Red Fort is a historic fort in the city of Delhi (in Old Delhi) in India that served as the main residence of the Mughal Emperors.</li>
+          <li>Emperor Shah Jahan commissioned construction of the Red Fort on 12 May 1638, when he decided to shift his capital from Agra to Delhi.</li>  
+          <li>Originally red and white, its painting is credited to architect Ustad Ahmad Lahori, who also constructed the Taj Mahal. It was renovated between May 1639 and April 1648 based on an earlier fort.</li>  
+          <li>On 15 August 1947, the first prime minister of India, Jawaharlal Nehru, raised the Indian national flag above the Lahori Gate.</li>  
+          <li>Every year on India's Independence Day (15 August), the prime minister hoists the Indian tricolour flag at the fort's main gate and delivers a nationally broadcast speech from its ramparts.[</li>   
         </ul>
       </h4>
     </div>
     <div class="col-md-3 info" style="display: none;">
       <h4>
         <ul style="list-style-type:square; text-align: left;">
-
+          <li>The India Gate (formerly known as the All India War Memorial) is a war memorial located astride the Rajpath, on the eastern edge of the "ceremonial axis" of New Delhi,[1] formerly called Kingsway</li>
+          <li>It stands as a memorial to 70,000 soldiers of the British Indian Army who died in between 1914 and 1921 in the First World War</li>  
+          <li>On the rooftop above the archway is a broad shallow domed bowl that was intended to be filled with flaming oil on ceremonial occasions. No fires have been set on the rooftop in recent years, but four eternal flames are now sheltered at the base of the structure</li>  
+          <li>The design of India gate is almost similar to its French counterpart war memorial, the Arc-de-Triomphe.</li>  
         </ul>
       </h4>
     </div>
     <div class="col-md-3 info" style="display: none;">
       <h4>
         <ul style="list-style-type:square; text-align: left;">
-          
+          <li>While in New Delhi, make a point to visit the Lotus Temple where a dazzling work of current architecture anticipates you.</li>  
+          <li>The Bahai House of love, prominently known as the Lotus Temple takes after a halfway open lotus flower encompassed by its leaves and seems like coasting on water.</li>  
+          <li>The Lotus Temple has three layers of nine petals each in its development. The peripheral layer of nine petals is built opening outwards and furthermore shapes the nine doors to the external round lobby.</li> 
+          <li>In contrast to a few different Temples in India, the Lotus Temple draws guests from all beliefs and individuals from all strolls of society are welcome independent of their caste, ideology or ethnicity</li>  
         </ul>
       </h4>
     </div>
 </div>
+<a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g304551-Activities-New_Delhi_National_Capital_Territory_of_Delhi.html"><li>And Others</li></a>
+
+
+
+
+
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  var info = document.getElementsByClassName("info");
+  var dispinfo = document.getElementById("dispinfo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  dispinfo.innerHTML = info[slideIndex-1].innerHTML
+}
+</script>
 <a style="text-align: center;" href="https://www.tripadvisor.in/Attractions-g304551-Activities-New_Delhi_National_Capital_Territory_of_Delhi.html"><li>And Others</li></a>
 
 
